@@ -1,0 +1,66 @@
+/** @format */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: roboto;
+}
+
+nav {
+    background-color: #f00;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+nav .brand {
+    font-weight: 900;
+    font-size: 30px;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    margin-left: 10px;
+    list-style: none;
+    font-family: Roboto;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+    background-color: #666363;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+nav li a:hover {
+    background-color: #454545;
+}
+
+/* main section */
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+main {
+    margin-top: 220px;
+    text-align: center;
+}
+main .main-logo {
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+main .main-logo img {
+    width: 300px;
+}
