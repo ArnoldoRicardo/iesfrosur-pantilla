@@ -1,14 +1,32 @@
 /** @format */
 
+/* -------------------------------------------------------------------- vars */
+:root {
+    --main-color: #f00;
+    --main-color-light: #eeeeee;
+    --second-color: #666363;
+    --second-color-hight: #454545;
+    --text-color: #fff;
+}
+
+/* -------------------------------------------------------------------- estandar */
+
 body {
     margin: 0;
     padding: 0;
-    font-size: 12px;
+    font-size: 18px;
     font-family: roboto;
 }
 
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* -------------------------------------------------------------------- navbar */
+
 nav {
-    background-color: #f00;
+    background-color: var(--main-color);
     justify-content: space-between;
     display: flex;
     align-items: center;
@@ -18,7 +36,7 @@ nav {
 nav .brand {
     font-weight: 900;
     font-size: 30px;
-    color: white;
+    color: var(--text-color);
 }
 
 nav ul {
@@ -35,32 +53,153 @@ nav li {
 
 nav li a {
     text-decoration: none;
-    color: white;
-    background-color: #666363;
+    color: var(--text-color);
+    background-color: var(--second-color);
     border-radius: 3px;
     padding: 10px;
 }
 
 nav li a:hover {
-    background-color: #454545;
+    background-color: var(--second-color-hight);
 }
 
-/* main section */
+/* -------------------------------------------------------------------- container */
 
-a {
-    text-decoration: none;
-    cursor: pointer;
+.pagination {
+    margin: 10px;
 }
 
-main {
-    margin-top: 220px;
+.container {
+    margin: auto;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+/* -------------------------------------------------------------------- clases menu */
+
+.clases {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.clase {
+    background-color: var(--main-color-light);
+    margin: 10px;
+    max-width: 23%;
+    min-width: 22%;
+}
+
+.clase_header {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    text-align: center;
+    font-weight: 900;
+    font-size: 2em;
+}
+
+.clase_container {
+    padding: 15px 0;
     text-align: center;
 }
-main .main-logo {
-    width: 530px;
-    margin: 0 auto;
-    margin-bottom: 35px;
+
+.clase_container p {
+    margin: 5px 0;
 }
-main .main-logo img {
-    width: 300px;
+
+.clase_container a {
+    color: var(--main-color);
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.clase_footer {
+    display: flex;
+    padding: 5px;
+}
+
+.img_profesor {
+    height: 3em;
+    margin: auto;
+}
+
+.img_profesor img {
+    height: 100%;
+    border-radius: 50%;
+}
+
+.footer_content {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.footer_content h3 {
+    margin: 0;
+}
+
+/* -------------------------------------------------------------------- footer */
+
+footer {
+    background-color: var(--main-color-light);
+    text-align: center;
+    font-size: 2.5em;
+    padding: 10px;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .clases {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clase {
+        max-width: 90%;
+    }
+
+    footer {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav .nav_options {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li {
+        width: 100%;
+        margin: 1px;
+        background-color: var(--second-color);
+        border-radius: 3px;
+        text-align: center;
+    }
+
+    nav li a {
+        text-decoration: none;
+        color: var(--text-color);
+        padding: 0;
+        width: 100%;
+        display: inline-block;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    nav li a:hover {
+        background-color: var(--second-color-hight);
+    }
 }
